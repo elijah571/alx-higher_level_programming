@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+"""Defines a text file-reading function."""
+
+
 def read_file(filename=""):
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            for line in file:
-                print(line, end='')
-    except FileNotFoundError:
-        print("File not found.")
-    except Exception as e:
-        print("An error occurred:", e)
+    """Print the contents of a UTF8 text file to stdout."""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
